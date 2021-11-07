@@ -12,12 +12,9 @@ overwatch_price = games["ow"]
 apex_price = games["apex"] 
 beatsaber_price = games["beatsaber"] 
 
-print(food)
-print(games)
-print(call_of_duty_price)
 
 shoes = {"Jordan 13": 1 , "Yeezy": 8 , "Foamposite": 10 , "Air Max": 5 , "SB Dunk": 20}
-print(shoes)
+
 
 shoes["SB Dunk"] -= 2
 shoes["Yeezy"] += 1
@@ -31,31 +28,65 @@ shoes["SB Dunk"] -= 3
 shoes["Jordan 13"] -= 3
 shoes["Foamposite"] -= 3
 shoes["Air Max"] -= 3
-print(shoes)
+
 
 food["eggs"] = 1.79
 food["bacon"] = 1.89
 food["soda"] = 1.39
-print(food)
+
 
 games["bloons"] = 20.00
 games["Gmod"] = 10.00
 games["DBD"] = 20.00
-print(games)
 
 shoes["Jordan 11"] = 12
 shoes["Vans"] = 4
 shoes["Pumas"] = 6
-print(shoes)
+
 
 del food["bacon"]
 del food["soda"] 
-print(food)
+
 
 del games["Gmod"] 
 del games["DBD"] 
-print(games)
+
 
 del shoes["Vans"] 
 del shoes["Pumas"] 
+
+def total_price(food_item, food_item2): 
+    total = food[food_item] + food[food_item2] 
+    return total 
+
+print(total_price("beef", "cheese"))    
+
+def price_difference(food_item, food_item2):
+     difference = food[food_item] - food[food_item2]
+     return abs(difference)
+
+print(price_difference("beef", "cheese"))
+
 print(shoes)
+
+def shoe_restock(shoe, num):
+    shoes[shoe] *= num 
+    return shoes 
+
+print(shoe_restock("Yeezy", 3))
+
+def clearance_sale(shoe, num):
+    shoes[shoe] /= num
+    return shoes
+print(clearance_sale("SB Dunk", 2))
+
+def game_search(dict):
+    largest = 0
+    game = ''
+    for key in dict.keys():
+        if dict[key] > largest:
+            largest = dict[key]
+            game = key
+    return (game, largest)
+print(game_search(games))
+             
