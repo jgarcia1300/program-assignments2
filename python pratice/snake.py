@@ -87,7 +87,7 @@ while True:
     if score > high_score:
         high_score = score 
             # add a segment 
-    new_segment = turtle.turtle()
+    new_segment = turtle.Turtle()
     new_segment.speed(0)
     new_segment.shape("square")
     new_segment.color("grey")
