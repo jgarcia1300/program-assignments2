@@ -86,13 +86,13 @@ while True:
     score = score+10
     if score > high_score:
         high_score = score 
-            # add a segment 
-    new_segment = turtle.Turtle()
-    new_segment.speed(0)
-    new_segment.shape("square")
-    new_segment.color("grey")
-    new_segment.penup()
-    segments.append(new_segment)
+                # add a segment 
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("grey")
+        new_segment.penup()
+        segments.append(new_segment)
 
         # move the end segment in reverse color
     for index in range(len(segments)-1, 0, 1):
